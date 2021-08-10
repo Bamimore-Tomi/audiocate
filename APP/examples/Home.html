@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <script src="Home.js"></script>
+  <title>AudioCate</title>
+</head>
+
+<body>
+  <main class="wrapper">
+    <div class="container">
+      <div class="nav-open">
+        <span class="header">
+        <ion-icon class="menu-open" name="menu-outline"></ion-icon>
+        <img
+            src="../Landing Page/images/AudioCate-removebg-preview.png" alt="logo" height="75px">
+          <h1>AudioCate</h1>
+      </span>
+            </div>
+      <div class="side-bar">
+        <ion-icon class="menu-close" name="close-outline"></ion-icon>
+        <a href='../Landing Page/homepage.html' class="header"> <img
+            src="../Landing Page/images/AudioCate-removebg-preview.png" alt="logo" height="75px">
+          <h1>AudioCate</h1>
+        </a>
+        <ul>
+          <li>
+            <a href="Home.html">
+              <ion-icon name="sync"></ion-icon> <span>Convert</span>
+
+            </a> </li>
+          <li>
+            <a href="#">
+              <ion-icon name="book"></ion-icon><span>My Books</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ion-icon name="search-circle"></ion-icon> <span>Explore</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-people-carry"></i> <span>Contribute</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ion-icon name="grid"></ion-icon> <span>Genres</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ion-icon name="settings"></ion-icon> <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="logout">
+              <ion-icon name="log-out-outline"></ion-icon> <span>Log out</span>
+            </a>
+          </li>
+
+        </ul>
+        <div class="overlay"></div>
+      </div>
+      
+      <div class="display">
+        <div class="upload">
+          <div class="text-display">
+            <textarea name="input" id="text-input" cols="30" rows="10">Type, paste or edit text here</textarea>
+          </div>
+          <div id="img-display">
+            <p>Select Image file</p>
+            <input onchange="handleFiles(this.files)" type="file" multiple accept="image/*">
+          </div>
+
+        </div>
+        <div class="voice-select">
+          <label for="voice"></label>
+          <select name="voice" id="voice">
+            <option value="Male" selected disabled>Select preferred voice</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+
+          <div id="conversion"></div>
+        </div>
+        <div></div>
+        <div class="actions">
+          <div class="save">
+            <button>Save</button>
+          </div>
+          <div class="play">
+            <button>Play</button>
+          </div>
+          <div class="delete">
+            <button>Delete</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</body>
+
+</html>

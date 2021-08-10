@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="{% static 'homepage.css' %}" rel="stylesheet"/>
+  <title>
+   Home Page
+  </title>
+ </head>
+ <body>
+  <main class="container">
+   <div class="right">
+    <section class="header">
+     <a class="header-link" href="homepage.html">
+      <img alt="logo" src="{% static 'images/AudioCate-removebg-preview.png' %}" width="100px"/>
+      <span>
+       AudioCate
+      </span>
+     </a>
+    </section>
+    <div class="img-area">
+     <img alt="image" id="img" src="{% static 'images/onbook.jpg' %}"/>
+    </div>
+   </div>
+   <div class="text-area">
+    <article>
+     <h2>
+      LET YOUR BOOK DO THE TALKING
+     </h2>
+     <p>
+      <b>
+       AudioCate
+      </b>
+      is the future of education. Convert your books in image and text format into personalised audio books. Listen to get a better feel and understanding.
+     </p>
+    </article>
+    <form action="index.html">
+     <button type="submit">
+      Get Started
+     </button>
+    </form>
+   </div>
+  </main>
+  <footer class="footer" id="footer">
+  </footer>
+  <script src="{% static 'saucecode.js' %}">
+  </script>
+ </body>
+</html>

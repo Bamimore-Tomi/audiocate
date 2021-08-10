@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Josefin Slab', serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100vw;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: -5;
+  background: url("images/img2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 80vh;
+  min-width: 70vw;
+  margin: auto;
+  background-color: #eff;
+  border-radius: 50px;
+  position: relative;
+}
+
+.side-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  margin-right: 50px;
+  border-right: 1px solid #eaeaeb;
+  background-color: #eee;
+  border-radius: 50px 20px 20px 50px;
+ 
+}
+.side-bar .header{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left:20px;
+  padding-left: 0;
+  /* background-color: pink; */
+  width: 100%;
+  
+}
+.header h1{
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2;
+  color: #000;
+  font-family: "Rubik", sans-serif;
+}
+.side-bar a {
+  height: 5vh;
+  margin-top: 5vh;
+   padding-left: 15px;
+  color: initial;
+ 
+}
+.nav-open{
+  display: none;
+}
+
+.side-bar ul li a {
+  height: 5vh;
+  margin-bottom: 5vh;
+  list-style: none;
+   margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  /* border: 1px solid #000; */
+  border-radius: 15px;
+  padding: 20px;
+   
+}
+.menu-close{
+  position: absolute;
+  visibility: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+li span {
+  margin-left: 1rem;
+  font-size: 1rem; 
+  font-weight: 600;
+  color: #333
+}
+
+.logout{
+  height: 30px;
+  transform: scale(.8);
+  margin-left: 20px;
+
+
+}
+.logout:hover{
+  background-color: #d9534f;
+ 
+}
+.logout:focus:active{
+  transform: scale(.9)
+
+}
+.logout ion-icon{
+  background-color: #d9534f;
+}
+i,
+ion-icon {
+  font-size: 1rem;
+  width: 25px;
+  height: 25px;
+  align-self: center;
+  justify-content: center;
+  background-color: blueviolet;
+  color: #fff;
+}
+
+.fa-people-carry {
+  padding: 3px 2.5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #00C03F;
+ 
+}
+li a:focus:active{
+  transform: translateY(8px)
+}
+
+a:hover i,
+a:hover ion-icon {
+  background-color: transparent;
+
+}
+a:hover span{
+  color: #fff;
+}
+.display{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+.upload{
+  display: flex;
+  justify-content: space-evenly;
+  height: 200px;
+  max-width: 80%;
+}
+textarea{
+  background-color: initial;
+  border: 2px solid #005bff;
+  border-radius: 5px;
+  font-family: monospace;
+  padding: 20px;
+  height: 100%;
+  max-width: 80%
+}  
+textarea:focus{
+  outline-color: #00c03f;
+}
+#img-display{
+  height: 100%;
+  width: 40%;
+  border: 2px solid #005bff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.voice-select{
+  height: 100px;
+  margin-top: 50px;
+  margin-left: -120px;
+}
+input[type='file']{
+  width: 80%;
+  font-size: 12px;
+  
+}
+
+#img-display:hover{
+  border: 2px solid green;
+}
+select{
+  width: 150%;
+  height: 50px;
+  text-align: center;
+  border: none;
+  background-color: teal;
+  color: #fff;
+  font-size: 1rem;;
+}
+#conversion{
+  display: block;
+  height: 300px;
+}
+.actions{
+  width: 80%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+
+ button{
+  width: 100px;
+  height: 30px;
+  background-color: #00c03f;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 16px;
+  margin-right: 100px;
+}
+button:hover{
+  border: 2px solid #eee
+
+}
+button:focus {
+  outline: none;
+}
+
+button:active{
+  transform: scale(1.1);
+}
+.delete button{
+  background-color: #d9534f
+}
+
+@media only screen and (max-width: 968px){
+  .container{
+     position: relative;
+     height: 100vh;
+     border-radius: 0;
+     width: 100vw;
+
+
+    }
+    .side-bar{position: fixed;
+    width: 300px;
+    left: -300px; 
+   height: 100%;
+    padding-left: 0;
+    border-radius: 0;
+    z-index: 10;
+    overflow: scroll;
+    }
+  .side-bar.open{
+    position: fixed;
+    width: 300px;
+    left: 0;
+   height: 100%;
+    padding-left: 0;
+    border-radius: 0;
+  }
+  .side-bar .header{
+    position: absolute;
+    top: 0;
+    width: 60%;
+        /* display: none; */
+  }
+  .side-bar ul{
+    position: absolute;
+    top: 100px;
+  }
+  .menu-close{
+    visibility: visible;
+    top: 30px;
+    left: 240px;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    color: #fff;
+  }
+  
+
+  .overlay{
+    position: fixed;
+    top: 0;
+    left: 300px;
+    width: 100vw; 
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.5);
+    visibility: hidden; 
+    backdrop-filter: blur(2px);
+    opacity: 0;
+  }
+  .side-bar.open .overlay{
+    visibility: visible;
+    opacity: 1;
+  }
+  .side-bar.open  h1 {
+color: #000
+  }
+  .nav-open{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #005bff
+
+  }
+  .nav-open ion-icon{
+    position: absolute;
+    left: 0;
+    height: 50px;
+    width: 50px;
+font-size: 2rem;
+background-color: transparent;
+z-index: 4;
+  }
+  .nav-open .header{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header h1{
+     color: #fff
+  }
+  li span{
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+  }
+  i,
+ion-icon {
+  font-size: 1rem;
+  width: 30px;
+  height: 30px;}
+  .side-bar ul li a {
+    padding: 25px;
+
+  }
+  .display{
+    position: absolute;
+    top: 20vh;
+    left: 5vw;
+    width: 90vw;
+    height: 60vh;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fefeff
+  }
+  textarea{
+    background-color: gray;
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 40vw;
+  }
+  .upload{
+    height: 100px;
+    font-size: 12px;
+  }
+  @media only screen and (min-width:768px){
+.upload{
+  height: 250px;
+  font-size: 16px;
+}
+select{
+font-size: 1rem
+}
+  }
+
+
+  .voice-select{
+    width: 60vw;
+    margin-top: 10vh;
+  }
+  select{
+    width: 50%;
+   font-size: .9rem;
+    position: absolute;
+    left: 12vw;
+  }
+
+  .actions{
+    width: 70vw;
+    margin-top: 5vh;
+      }
+      button{
+        width: 80px;
+        margin: auto
+      }
+}
